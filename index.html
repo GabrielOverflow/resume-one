@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Resume Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      /* Custom print styles to ensure the resume looks perfect on paper */
+      @media print {
+        @page {
+          margin: 0;
+          size: auto;
+        }
+        body {
+          background: white;
+        }
+        .no-print {
+          display: none !important;
+        }
+        .print-container {
+          width: 100% !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          box-shadow: none !important;
+          border: none !important;
+        }
+      }
+      /* Font overrides */
+      .font-serif {
+        font-family: 'Merriweather', serif;
+      }
+      .font-sans {
+        font-family: 'Open Sans', sans-serif;
+      }
+      /* JD Match Highlight */
+      .jd-match-highlight {
+        background-color: #86efac;
+        color: #000;
+        padding: 2px 4px;
+        border-radius: 3px;
+        font-weight: 600;
+      }
+      /* Remove highlight when printing */
+      @media print {
+        .jd-match-highlight {
+          background-color: transparent !important;
+          padding: 0 !important;
+          border-radius: 0 !important;
+          font-weight: inherit !important;
+        }
+      }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "docx": "https://aistudiocdn.com/docx@^9.5.1",
+    "@dnd-kit/sortable": "https://aistudiocdn.com/@dnd-kit/sortable@^10.0.0",
+    "@dnd-kit/utilities": "https://aistudiocdn.com/@dnd-kit/utilities@^3.2.2",
+    "file-saver": "https://aistudiocdn.com/file-saver@^2.0.5",
+    "@dnd-kit/core": "https://aistudiocdn.com/@dnd-kit/core@^6.3.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

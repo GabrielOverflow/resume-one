@@ -1,0 +1,5 @@
+{
+  "name": "Minimalist Resume Builder",
+  "description": "A professional, drag-and-drop resume builder with fixed typography and modular sections. Exports to PDF and Word.",
+  "requestFramePermissions": []
+}
